@@ -1,0 +1,398 @@
+/*#region*/
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto&display=swap');
+
+html{
+    font-size: 12px;
+}
+
+body{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  
+  background-color: white;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e7b7f0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #704278;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #704278;
+}
+
+/*#endregion*/
+
+/*************************************************/
+/***********  MAIN COMPONENTS
+/*************************************************/
+
+/*#region*/
+
+body{
+    height: 100vh;
+    background: linear-gradient(89.89deg, #704278 0.09%, #968CC2 99.91%);
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.row{
+    padding-top: 10px;
+    position: relative;
+    max-width: 114rem;
+    margin: 0 auto;
+
+    z-index: 2;
+}
+
+/*#endregion*/
+
+/*************************************************/
+/***********     Main
+/*************************************************/
+
+/*#region*/
+
+.main{
+    margin-top: 2.5rem;
+}
+
+.main-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.main-panels{
+    display: flex;
+}
+
+/*#endregion*/
+
+/*************************************************/
+/***********     Panels
+/*************************************************/
+
+/*#region*/
+
+.panels{
+    padding: 15px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 12px 14px 18px -3px rgba(0,0,0,0.4);
+}
+
+.panels-option{
+    flex: 1;
+    height: max-content;
+    text-align: center;
+    font-size: 1rem;
+    background-color: whitesmoke;
+}
+
+.panels-option *{
+    background-color: whitesmoke;
+}
+
+.panels-option > *{
+    margin: 10px;
+}
+
+.panels-activity{
+    flex-grow: 5;
+    min-width: 0;
+    height: fit-content;
+}
+
+/*#endregion*/
+
+/*************************************************/
+/***********     Components
+/*************************************************/
+
+/*#region*/
+
+.input_set{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    min-height: 0;
+}
+
+.input_set > p{
+    border-bottom: 1px solid black;
+    font-size: 1rem;
+    padding-bottom: -8px;
+    width:max-content;
+}
+
+.input_set > input{
+    border: 1px solid transparent;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    text-align: center;
+    flex:1;
+}
+
+.input_set > input:focus{
+    border: 1px solid transparent;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.input_set > select{
+    border: 1px solid transparent;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    text-align-last: center;
+    flex:3;
+}
+
+.input_set > select:focus{
+    border: 1px solid transparent;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.button{
+    background-color: #5f3666;
+    color: white;
+
+    padding: 5px;
+    text-align: center;
+    border-radius: 25px;
+
+    transition: 0.15s;
+
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(160, 103, 170);
+}
+
+.button:active{
+    background-color: rgb(108, 47, 119);
+}
+
+.space{
+    height:0.5rem;
+}
+
+/*************************************************/
+/***********     Activity Frame
+/*************************************************/
+
+.parent_frame{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    min-width: 0px;
+    height: fit-content;
+    
+}
+
+.parent-frame-container{
+    width: 100%;
+    height: fit-content;
+
+    flex-grow: 1;
+    min-height: 0;
+}
+
+.frame-input {
+    padding: 5px;
+    flex-grow: 1;
+    min-height: 0;
+}
+
+.frame-input-title{
+    text-align: center;
+    margin: 5px;
+}
+
+.frame-input-belt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.frame-input-belt *{
+    margin: 2px;
+
+    background-color: #5f3666;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.frame-input-belt-entry{
+    background-color: #5f3666;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.frame-history{
+    height: inherit;
+    min-height: 50vh;
+    /*max-height: 110vh;
+    overflow-x: auto;*/
+
+    text-align: center;
+    padding-top: 25px;
+    
+    overflow-x: auto;
+
+}
+
+.frame-history > table{
+    margin: auto;
+}
+
+.parent-frame-container{
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.frame-input-belt-entry{
+    background-color: #5f3666;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.history-entry{
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+
+    transition: 0.15s;
+
+    margin-bottom: 20px;
+
+    border-right: 1px solid black;
+
+    padding-right: 12px;
+
+}
+
+.history-entry > p{
+    /*
+    background-color: rgb(93, 54, 100);
+    color: white;
+    */
+
+    padding: 5px 3px;
+
+    text-align: center;
+
+    vertical-align: middle;
+    border-radius: 5px;
+    width: max-content;
+    min-width: 25px;
+    
+    margin: 5px auto;
+
+}
+
+.history-entry > .data{
+    
+    padding: 10px 0px;
+    
+    transition: 0.15s;
+}
+
+
+.history-entry:hover .data{
+}
+
+
+.history-list{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    width: fit-content;
+    height: fit-content;
+
+    margin: auto;
+
+    margin-top: 25px;
+
+
+}
+
+.data > p{
+    font-size: 1rem;
+}
+
+.error{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 5px;
+    color: red;
+}
+
+.hide-display{
+    display: none;
+}
+
+/*#endregion*/
+
+/*************************************************/
+/***********   Query
+/*************************************************/
+
+@media (max-width: 800px) {
+    .main-panels {
+      flex-direction: column;
+    }
+    .space{
+        height: 0rem;
+    }
+  }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRU</title>
+    <link rel="stylesheet" type="text/css" href="./vendor/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./vendor/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+</head>
+<body>
+
+    <div class="row">
+        
+        <div class="main">
+
+            <div class="main-title animate__animated animate__flipInX">
+
+                <h6>Developed by BS CPE - 3B || Leo Mark Castro & Adrian Cruz & John Danielle Casabal & Rhizz David de Jesus</h6>
+                <h3>Page Replacement</h3>
+
+            </div>
+
+            <div class="main-panels">
+
+                <div class="panels panels-option animate__animated  animate__fadeInUp">
+
+                    <div class="input_set">
+                        <p>Page Frames</p>
+                        <input 
+                        type="number" value="3" id="input-frames"/>
+                    </div>
+
+                    <div class="input_set">
+                        <p>Algorithm</p>
+                        <select id="input-algorithm">
+                            <option value="lru">LRU</option>
+                            <option value="fifo">FIFO</option>
+                            <option value="optimal">Optimal</option>
+                        </select>
+                    </div>
+
+                    <div class="space"></div>
+
+                    <div class="button" id="input-start">Start Schedule</div>
+                    <div class="button" id="input-clear">Clear</div>
+
+                    <div class="space"></div>
+
+                    <p>Page Faults : <span id="results-faults">0</span></p>
+                    <p>Hits : <span id="results-hits">0</span></p>
+                    <p>References : <span id="results-references">0</span></p>
+                    <p>Page Fault Rate : <span id="results-faultrate">0</span></p>
+                    <p>Hit Rate : <span id="results-hitrate">0</span></p>
+
+                    
+                    <div class="space"></div>
+
+                </div>
+
+                <div class="panels panels-activity animate__animated  animate__fadeInUp">
+
+                    <div class="parent_frame">
+
+                        <div class="parent-frame-container">
+
+                            <div class="input_set">
+                                <input placeholder="Type reference input here" id="input-input"/>
+                            </div>
+                            <p class="error animate__animated  animate__fadeInDown hide-display" id="Error">Input is recommended to be greater than 5 and lower than 15. Press enter again if you want to proceed.</p>
+
+                            <div class="frame-input">
+                                <p class="frame-input-title">Inputs</p>
+    
+                                <div class="frame-input-belt" id="output-input">
+                                    <!--
+                                    <p>1</p>
+                                    <p>2</p>
+                                    <p>3</p>
+                                    -->
+                                </div>
+    
+                            </div>
+                            
+                            <div class="frame-history">
+
+                                <div class="history-list" id="output-history">
+
+                                    <!--
+
+                                    <div class="history-entry animate__animated  animate__fadeInUp">
+                                        <small>1</small>
+                                        <p>1</p>
+                                        <div class="data">
+                                            <p>^ 5</p>
+                                            <p>Hit: O</p>
+                                            <p>Flt: X</p>
+                                        </div>
+                                    </div>
+
+                                    -->
+
+                                    
+                                    
+                                    
+                                </div>
+
+                            </div>
+
+                        
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./resources/js/script.js"></script>
+</body>
+</html>
